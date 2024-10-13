@@ -1,23 +1,34 @@
 import { createTheme } from "@mui/material/styles";
 
 export const theme = createTheme({
-  breakpoints:{
+  breakpoints: {
     values: {
       xs: 0,
       sm: 300,
       md: 900,
       lg: 1200,
       xl: 1536,
-    }
+    },
   },
   typography: {
     fontFamily: ["Ubuntu", "sans-serif"].join(","),
     h2: {
-      fontFamily: ['"Afacad Flux"'].join(""),
       fontWeight: 700,
       fontSize: "40px",
       lineHeight: "130%",
-      color: "red",
+      color: "#000",
+    },
+    body1: {
+      fontWeight: 400,
+      fontSize: "18px",
+      lineHeight: "100%",
+      color: "#1d1d1d",
+    },
+    body2: {
+      fontWeight: 400,
+      fontSize: "14px",
+      lineHeight: "140%",
+      color: "#1d1d1d",
     },
   },
   palette: {
@@ -34,6 +45,34 @@ export const theme = createTheme({
       800: "#283931",
       900: "#131B17",
       950: "#0A0F0D",
+    },
+    grey: {
+      main: "#F2F2F2",
+      50: "#FCFCFC",
+      100: "#FCFCFC",
+      200: "#FAFAFA",
+      300: "#F7F7F7",
+      400: "#F5F5F5",
+      500: "#F2F2F2",
+      600: "#C2C2C2",
+      700: "#919191",
+      800: "#616161",
+      900: "#303030",
+      950: "#171717",
+    },
+    text: {
+      main: "#1d1d1d",
+      50: "#E8E8E8",
+      100: "#D1D1D1",
+      200: "#A6A6A6",
+      300: "#787878",
+      400: "#4A4A4A",
+      500: "#1D1D1D",
+      600: "#171717",
+      700: "#121212",
+      800: "#0D0D0D",
+      900: "#050505",
+      950: "#030303",
     },
     secondary: {
       main: "#CB4A4A",
@@ -55,11 +94,46 @@ export const theme = createTheme({
       defaultProps: {
         disableRipple: true,
       },
+      styleOverrides: {
+        root: {
+          fontWeight: 700,
+          fontSize: "18px",
+          lineHeight: "140%",
+          textAlign: "center",
+          color: "#fcfcfc",
+          borderRadius: "10px",
+        },
+      },
+    },
+    MuiTextField: {
+      // styleOverrides: {
+      //   root: {
+      //     backgroundColor: "#fff",
+      //     "&:hover": {
+      //       backgroundColor: "#fff",
+      //       // Reset on touch devices, it doesn't add specificity
+      //       "@media (hover: none)": {
+      //         backgroundColor: "#fff",
+      //       },
+      //     },
+      //     "&.Mui-focused": {
+      //       backgroundColor: "#fff",
+      //     },
+      //   },
+      // },
+      variants: [
+        {
+          props: { variant: "filled" },
+          style: {
+            backgroundColor: "#fff",
+          },
+        },
+      ],
     },
     MuiContainer: {
       styleOverrides: {
-        root: {
-          maxWidth: 1280,
+        maxWidthXs: {
+          maxWidth: "1280px !important",
         },
       },
     },
