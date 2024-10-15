@@ -1,4 +1,8 @@
 import product1 from "../assets/product1.svg";
+import rasm1 from "../assets/product1.png"
+import rasm2 from "../assets/product2.png"
+import rasm3 from "../assets/product3.png"
+import rasm4 from "../assets/product4.png"
 export const data ={
      navbar:[
         {
@@ -94,6 +98,25 @@ export const data ={
               month: "12",
             },
           },
+     ],
+     pradacts:[
+      {
+        id: 1,
+        img: rasm1
+      },
+      {
+        id: 2,
+        img: rasm2
+      },
+      {
+        id: 3,
+        img: rasm3
+      },
+      {
+        id: 4,
+        img: rasm4
+      },
      ]
+
 }
     

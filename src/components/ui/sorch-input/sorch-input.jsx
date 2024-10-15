@@ -4,7 +4,9 @@ import { InputAdornment, TextField } from '@mui/material'
 import SorchIcon from '../../../assets/icons/sorch-icon'
 
 export default function SorchInputs({onChange}) {
-  return (
+  return (<>
+  
+  
     <SorchInputWrapper>
     <TextField
     onChange={onChange}
@@ -22,5 +24,6 @@ export default function SorchInputs({onChange}) {
           }}
         />
     </SorchInputWrapper>
+  </>
   )
 }

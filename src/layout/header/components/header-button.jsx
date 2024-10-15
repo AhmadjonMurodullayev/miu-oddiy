@@ -15,7 +15,7 @@ export default function HeaderButton() {
   `;
   return (
     <>
-      <Stack direction={"row"} gap={"20px"}>
+      <Stack sx={{ display: { xs: "none", md: "flex" } }} direction={"row"} gap={"20px"}>
         <CustomIcons>
           <UserIcon />
         </CustomIcons>
