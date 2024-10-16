@@ -34,7 +34,6 @@ export const ProductCard = ({
   instalment,
 }) => {
   return (
-    <NavLink style={{ textDecoration: 'none' }} to={`/product/${id}`}>
       <CardWrapper>
         <Stack
           mb={"20px"}
@@ -50,9 +49,13 @@ export const ProductCard = ({
         <Box mb={"20px"} textAlign={"center"}>
           <img src={img} alt="product" />
         </Box>
+    <NavLink style={{ textDecoration: 'none' }} to={`/product/${id}`}>
+
         <Typography mb={"8px"} fontWeight={500} variant="body1">
           {title}
         </Typography>
+    </NavLink>
+
         <Typography mb={"8px"} variant="body2">
           Размер: {size}
         </Typography>
@@ -63,6 +66,5 @@ export const ProductCard = ({
           <Rating value={raiting} precision={0.5} readOnly />
         </Stack>
       </CardWrapper>
-    </NavLink>
   );
 };
